@@ -24,6 +24,6 @@
     "mounts": [
         "source=${localEnv:HOME}${localEnv:USERPROFILE}/.bash_history,target=/home/vscode/.bash_history,type=bind"
     ],
-    "postCreateCommand": "echo 'export ROS_MASTER_URI=http://QTRD000349.arts.local:11311' >> ~/.bashrc && echo 'export ROS_IP=$(hostname -I | awk \"{print \\$1}\")' >> ~/.bashrc && echo 'source /opt/ros/noetic/setup.bash' >> ~/.bashrc"
+    "postCreateCommand": "echo 'export ROS_MASTER_URI=http://QTRD000349.arts.local:11311' >> ~/.bashrc && echo 'export ROS_HOSTNAME=$(hostname -I | awk \"{print \\$1}\")' >> ~/.bashrc && echo 'source /opt/ros/noetic/setup.bash' >> ~/.bashrc"
 
 }
